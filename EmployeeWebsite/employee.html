@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Employee</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/employee.css" rel="stylesheet"/>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <mega name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <nav style="background-color:lightslategrey;font-family:Arial;font-size:larger" class="navbar navbar-expand-md navbar-dark ">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/employee.html">Employees</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/calls.html">Calls</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/report.html">Reports</a>
+                </li>
+            </ul>
+        </div>
+        <div class="form-group mt-2 mr-2">
+            <input type="text" class="form-control" id="srch" placeholder="Search">
+        </div>
+    </nav>
+    <p>  </p>
+    <p>  </p>
+    <p>  </p>
+    <p>  </p>
+    <p>  </p>
+    <center><img src="img/Help_Desk_Logo_Futura.png" height="100" width="400" alt="Italian Trulli"></center>
+    <div class="text-center">
+        <h1>Employees</h1>
+    </div>
+    <div class="text-center col-xs-6"></div>
+    <div class="justify-content-center align-items-center row mt-5 ml-1">
+        <div class="list-group col-10" id="employeeList">
+        </div>
+    </div>
+
+    <form id="EmployeeModalForm" name="EmployeeModalForm" method="post" action="">
+        <div class="modal fade text-center mr-3" data-backdrop="static" id="theModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header d-block">
+                        <img src="img/Help_Desk_Logo_Futura.png" height="100" width="400" />
+                        <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mx-4 my-4">
+                            <div class="card">
+                                <div style="background-color:lightslategrey" class="card-header text-center">
+                                    Employee Information
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-4">Title:</div>
+                                        <div class="col-8">
+                                            <input type="text" placeholder="enter title" id="TextBoxTitle" name="TextBoxTitle" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">First:</div>
+                                        <div class="col-8">
+                                            <input type="text" placeholder="enter first name" id="TextBoxFirstname" name="TextBoxFirstname" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Surname:</div>
+                                        <div class="col-8">
+                                            <input type="text" placeholder="enter last name" id="TextBoxLastname" name="TextBoxLastname" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Phone#:</div>
+                                        <div class="col-8">
+                                            <input type="text" placeholder="enter phone" id="TextBoxPhone" name="TextBoxPhone" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Email:</div>
+                                        <div class="col-8">
+                                            <input type="text" placeholder="enter email" id="TextBoxEmail" name="TextBoxEmail" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Department:</div>
+                                        <div class="col-8"><select id="Department" name="Department" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Picture</div>
+                                        <div class="col-4 mt-2" id="ImageHolder"></div>
+                                        <div class="col-4">&nbsp;</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <input style="background-color:lightslategrey" type="button" class="btn " value="Update" id="actionbutton" />
+                            <input style="background-color:lightslategrey" type="button" class="btn " data-toggle="confirmation" id="deletebutton" data-placement="right" value="delete" />
+                            <input id="fileUpload" type="file" class="border float-left col-9 col-sm-4" />
+                            <div id="modalstatus" class="text-left mt-3 mb-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+        <script src="Scripts/jquery-3.3.1.min.js"></script>
+        <script src="Scripts/jquery.validate.min.js"></script>
+        <script src="Scripts/popper.min.js"></script>
+        <script src="Scripts/bootstrap.bundle.min.js"></script>
+        <script src="Scripts/bootstrap-confirmation.min.js"></script>
+        <script src="Scripts/employee.js"></script>
+</body>
+</html>

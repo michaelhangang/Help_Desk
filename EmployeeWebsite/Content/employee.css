@@ -1,0 +1,16 @@
+﻿div.error {
+    color: white;
+    background-color: #dc3545;
+    padding: .25em .4em;
+    font-size: 85%;
+    font-weight: 800;
+    line-height: 1;
+    left: 200px;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+.large {
+    width: 20px;
+    height: 20px;
+}
